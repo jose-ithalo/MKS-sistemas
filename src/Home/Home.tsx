@@ -1,11 +1,14 @@
-import './Home.css';
+import "../css/global.css";
 
-function App() {
-  return (
-    <div className="containerHome">
-      <h1>Projeto</h1>
-    </div>
-  );
+import Header from "../components/Header/header";
+
+function Home() {
+    return (
+        <div className="containerHome">
+            <Header></Header>
+            <h1>Projeto</h1>
+        </div>
+    )
 }
 
-export default App;
+export default Home; 
