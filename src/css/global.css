@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+:root {
+  --white: #FFFFFF;
+  --blue: #0F52BA;
+  --black: #000000;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
