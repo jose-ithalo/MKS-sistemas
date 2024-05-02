@@ -8,8 +8,44 @@
 .headerContainer {
   background-color: #0F52BA;
   color: #FFFFFF;
-  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 7rem;
   width: 100%;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.headerTitle h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+}
+.headerTitle span {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  opacity: 0.7;
+}
+
+.purchaseArea {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 1.5rem 1rem;
+  width: 9rem;
+}
+.purchaseArea img {
+  margin-right: 1.5rem;
+  width: 1.9rem;
 }
 
 * {
@@ -20,6 +56,10 @@
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 /*# sourceMappingURL=global.css.map */
