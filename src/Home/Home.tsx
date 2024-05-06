@@ -1,6 +1,7 @@
 import "../css/global.css";
 
 import Header from "../components/Header/header";
+import Card from "../components/Card/card";
 import Footer from "../components/Footer/footer";
 
 function Home() {
@@ -8,12 +9,7 @@ function Home() {
         <div className="containerHome">
             <Header></Header>
             <div className="productsArea">
-                <div className="card">
-                    <h1>Projeto</h1>
-                    <div className="card__price">
-                        <span>COMPRAR</span>
-                    </div>
-                </div>
+                <Card></Card>
             </div>
             <Footer></Footer>
         </div>
