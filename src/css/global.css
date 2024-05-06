@@ -8,31 +8,8 @@
   width: 100%;
 }
 
-.card {
-  background-color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 28.5rem;
-  width: 21.8rem;
-}
-
-.card__price {
-  background-color: #0F52BA;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  color: #FFFFFF;
-  padding: 1.5rem 0;
-  width: 100%;
-}
-.card__price span {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
 .productsArea {
   align-self: center;
-  background-color: lightblue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,6 +70,71 @@
 }
 .footerContainer p {
   font-size: 1.2rem;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1333333333);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 28.5rem;
+  width: 21.8rem;
+}
+
+.card__bottom {
+  background-color: #0F52BA;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  width: 100%;
+}
+.card__bottom > img,
+.card__bottom span {
+  cursor: pointer;
+  margin: 1rem;
+}
+.card__bottom img {
+  width: 1.2rem;
+}
+.card__bottom span {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 2rem 1rem 0 1rem;
+}
+.card__info div {
+  display: flex;
+  align-items: center;
+}
+.card__info h2 {
+  color: #2C2C2C;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.card__info h3 {
+  background-color: #373737;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+.card__info p {
+  color: #2C2C2C;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 * {
