@@ -10,11 +10,13 @@
 
 .productsArea {
     align-self: center;
-    // background-color: lightblue;
     display: flex;
     align-items: center;
+    gap: 2rem;
     justify-content: center;
 
     flex-wrap: wrap;
+    margin: 5rem 0;
     width: 70%;
+    max-width: 140rem;
 }
