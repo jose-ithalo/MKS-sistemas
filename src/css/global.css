@@ -12,9 +12,12 @@
   align-self: center;
   display: flex;
   align-items: center;
+  gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 5rem 0;
   width: 70%;
+  max-width: 140rem;
 }
 
 .headerContainer {
@@ -80,6 +83,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 1.5rem;
   height: 28.5rem;
   width: 21.8rem;
 }
