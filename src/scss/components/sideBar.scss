@@ -39,3 +39,15 @@
         font-weight: 700;
     }
 }
+
+@media(max-width: 649px) {
+    .MuiBox-root {
+        width: 100vw;
+    }
+}
+
+@media(min-width: 650px) and (max-width: 1400px) {
+    .MuiBox-root {
+        width: 32rem;
+    }
+}
