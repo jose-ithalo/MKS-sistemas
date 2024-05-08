@@ -1,11 +1,13 @@
+import "../../css/global.css";
+
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+
+import carIcon from "../../assets/car.svg";
+import closeIcon from "../../assets/x-icon.svg";
 
 import { useState } from "react";
 
@@ -17,26 +19,42 @@ export default function SideBar() {
     };
 
     const DrawerList = (
-        <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            {/* <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon> */}
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
+        <Box sx={{ height: "100vh", backgroundColor: "#0F52BA", color: "#FFFFFF" }}
+            role="presentation">
+            <div className="shoppingCart">
+                <div className="shoppingCart__products">
+                    <p>Carrinho</p>
+                    <p>de Compras</p>
+                    <img src={closeIcon} alt="Fechar" onClick={toggleDrawer(false)} />
+                    <List>
+                        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                            <ListItem key={text} disablePadding>
+                                <ListItemButton>
+                                    <div>
+                                        <h2>teste</h2>
+                                    </div>
+                                </ListItemButton>
+                            </ListItem>
+                        ))}
+                    </List>
+                </div>
+                <div className="priceArea">
+                    <span>Total:</span>
+                    <span>R$798</span>
+                </div>
+            </div>
+            <button>
+                Finalizar Compra
+            </button>
         </Box>
     );
 
     return (
         <div>
-            <Button onClick={toggleDrawer(true)}>Open drawer</Button>
+            <div className="purchaseArea" onClick={toggleDrawer(true)}>
+                <img src={carIcon} alt="Carrinho" />
+                <span>0</span>
+            </div>
             <Drawer open={open} anchor='right' onClose={toggleDrawer(false)}>
                 {DrawerList}
             </Drawer>
