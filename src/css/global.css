@@ -47,24 +47,6 @@
   opacity: 0.7;
 }
 
-.purchaseArea {
-  background-color: #FFFFFF;
-  border-radius: 8px;
-  color: #000000;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-  padding: 0 1rem;
-  height: 4.5rem;
-  width: 9rem;
-}
-.purchaseArea img {
-  margin-right: 1.5rem;
-  width: 1.9rem;
-}
-
 .footerContainer {
   background-color: #EEEEEE;
   padding: 1rem;
@@ -139,6 +121,45 @@
   color: #2C2C2C;
   font-size: 1rem;
   font-weight: 300;
+}
+
+.purchaseArea {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0 1rem;
+  height: 4.5rem;
+  width: 9rem;
+}
+.purchaseArea img {
+  margin-right: 1.5rem;
+  width: 1.9rem;
+}
+
+.MuiBox-root {
+  padding: 4.5rem;
+  position: relative;
+  width: 48.6rem;
+}
+.MuiBox-root img {
+  background-color: #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 1rem;
+  position: absolute;
+  top: 5rem;
+  right: 2.5rem;
+}
+.MuiBox-root p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.7rem;
+  font-weight: 700;
 }
 
 * {

@@ -1,5 +1,6 @@
 import "../../css/global.css";
-import carIcon from "../../assets/car.svg";
+
+import SideBar from "../SideBar/sideBar";
 
 function Header() {
     return (
@@ -8,10 +9,7 @@ function Header() {
                 <h1>MKS</h1>
                 <span>Sistemas</span>
             </div>
-            <div className="purchaseArea">
-                <img src={carIcon} alt="Carrinho" />
-                <span>0</span>
-            </div>
+            <SideBar />
         </header>
     )
 }
