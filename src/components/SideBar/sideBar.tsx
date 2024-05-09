@@ -1,10 +1,9 @@
-import "../../css/global.css";
 
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
+import CartItem from "../CartItem/cartItem";
 
 import carIcon from "../../assets/car.svg";
 import closeIcon from "../../assets/x-icon.svg";
@@ -25,15 +24,13 @@ export default function SideBar() {
                 <div className="shoppingCart__products">
                     <p>Carrinho</p>
                     <p>de Compras</p>
-                    <img src={closeIcon} alt="Fechar" onClick={toggleDrawer(false)} />
+                    <button className='btnClose' onClick={toggleDrawer(false)}>
+                        <img src={closeIcon} alt="Fechar" />
+                    </button>
                     <List>
                         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                             <ListItem key={text} disablePadding>
-                                <ListItemButton>
-                                    <div>
-                                        <h2>teste</h2>
-                                    </div>
-                                </ListItemButton>
+                                <CartItem />
                             </ListItem>
                         ))}
                     </List>
@@ -43,7 +40,7 @@ export default function SideBar() {
                     <span>R$798</span>
                 </div>
             </div>
-            <button>
+            <button className='btnFinish'>
                 Finalizar Compra
             </button>
         </Box>
