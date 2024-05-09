@@ -123,6 +123,25 @@
   font-weight: 300;
 }
 
+.btnClose {
+  border-radius: 50%;
+  position: absolute;
+  top: 5rem;
+  right: 2.5rem;
+  height: 3.8rem;
+  width: 3.8rem;
+}
+
+.btnFinish {
+  font-size: 2.8rem;
+  font-weight: 700;
+  height: 10%;
+  transition: all 1s;
+}
+.btnFinish:hover {
+  background-color: #262626;
+}
+
 .MuiBox-root {
   display: flex;
   flex-direction: column;
@@ -131,22 +150,13 @@
   position: relative;
   width: 48.6rem;
 }
-.MuiBox-root button {
-  background-color: #000000;
-  border: none;
-  color: #FFFFFF;
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  height: 10%;
-  transition: all 1s;
-}
-.MuiBox-root button:hover {
-  background-color: #262626;
-}
 .MuiBox-root p {
   font-size: 2.7rem;
   font-weight: 700;
+}
+
+.MuiList-root {
+  margin-top: 3.5rem !important;
 }
 
 .priceArea {
@@ -186,23 +196,16 @@
   width: 100%;
 }
 
-.shoppingCart__products img {
-  background-color: #000000;
-  border-radius: 50%;
-  cursor: pointer;
-  padding: 1rem;
-  position: absolute;
-  top: 5rem;
-  right: 2.5rem;
-}
-
 @media (max-width: 649px) {
+  .btnFinish {
+    width: 100%;
+  }
   .MuiBox-root {
     align-items: center;
     width: 100vw;
   }
-  .MuiBox-root button {
-    width: 100vw;
+  .MuiList-root {
+    width: 100%;
   }
   .shoppingCart__products {
     display: flex;
@@ -221,10 +224,43 @@
     font-size: 2rem;
   }
 }
+.cartItem {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: -2px 2px 10px 0px rgba(0, 0, 0, 0.0509803922);
+  color: #000000;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  position: relative;
+  width: 100%;
+}
+.cartItem button {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.cartItem button img {
+  width: 0.8rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.btn, .btnClose, .btnFinish, .cartItem button {
+  background-color: #000000;
+  border: none;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
 }
 
 button {
