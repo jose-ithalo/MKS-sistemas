@@ -1,5 +1,3 @@
-import "../../css/global.css";
-
 
 function Footer() {
     return (
