@@ -62,6 +62,7 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1333333333);
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -81,9 +82,8 @@
   padding: 0 2rem;
   width: 100%;
 }
-.card__bottom > img,
+.card__bottom img,
 .card__bottom span {
-  cursor: pointer;
   margin: 1rem;
 }
 .card__bottom img {
