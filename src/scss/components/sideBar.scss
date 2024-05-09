@@ -7,7 +7,7 @@
     position: relative;
     width: 48.6rem;
 
-    & button {
+    button {
         background-color: $color-btn;
         border: none;
         color: $color-page;
@@ -22,7 +22,7 @@
         }
     }
 
-    & p {
+    p {
         font-size: 2.7rem;
         font-weight: 700;
     }
@@ -32,7 +32,7 @@
     display: flex;
     justify-content: space-between;
 
-    & span {
+    span {
         font-size: 2.8rem;
         font-weight: 700;
     }
@@ -52,7 +52,7 @@
     height: 4.5rem;
     width: 9rem;
 
-    & img {
+    img {
         margin-right: 1.5rem;
         width: 1.9rem;
     }
@@ -69,7 +69,7 @@
 }
 
 .shoppingCart__products {
-    & img {
+    img {
         background-color: $color-btn;
         border-radius: 50%;
         cursor: pointer;
@@ -85,7 +85,7 @@
         align-items: center;
         width: 100vw;
 
-        & button {
+        button {
             width: 100vw;
         }
     }
@@ -101,7 +101,7 @@
     .MuiBox-root {
         width: 32rem;
 
-        & button {
+        button {
             font-size: 2rem;
         }
     }
