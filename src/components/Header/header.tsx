@@ -1,5 +1,3 @@
-import "../../css/global.css";
-
 import SideBar from "../SideBar/sideBar";
 
 function Header() {
