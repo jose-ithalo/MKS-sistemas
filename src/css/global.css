@@ -230,8 +230,9 @@
   box-shadow: -2px 2px 10px 0px rgba(0, 0, 0, 0.0509803922);
   color: #000000;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   margin-bottom: 2rem;
-  padding: 1.5rem;
   position: relative;
   width: 100%;
 }
@@ -248,6 +249,17 @@
 }
 .cartItem button img {
   width: 0.8rem;
+}
+.cartItem h2 {
+  font-size: 1.4rem;
+}
+.cartItem img {
+  width: 4.6rem;
+}
+.cartItem p {
+  color: #2C2C2C;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 
 * {
