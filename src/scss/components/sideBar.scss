@@ -100,6 +100,12 @@
     }
 }
 
+@media(max-width: 370px) {
+    .shoppingCart {
+        padding: 4.5rem 2rem 0 2rem;
+    }
+}
+
 @media(max-width: 649px) {
 
     .btnFinish {
@@ -122,13 +128,16 @@
     }
 
     .shoppingCart__header {
-        justify-content: center;
         width: 100%;
 
         button {
             margin-right: unset;
-            position: relative;
-            left: 17rem;
+
+        }
+
+        div {
+            margin: 0 auto;
+            text-align: center;
         }
     }
 }
