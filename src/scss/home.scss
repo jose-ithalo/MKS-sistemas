@@ -20,3 +20,9 @@
     width: 70%;
     max-width: 140rem;
 }
+
+@media(max-width: 990px) {
+    .productsArea {
+        width: 90%;
+    }
+}
