@@ -18,7 +18,7 @@ export default function SideBar() {
     };
 
     const DrawerList = (
-        <Box sx={{ height: "100vh", backgroundColor: "#0F52BA", color: "#FFFFFF" }}
+        <Box sx={{ height: "100vh", color: "#FFFFFF" }}
             role="presentation">
             <div className="shoppingCart">
                 <div className="shoppingCart__products">
@@ -29,9 +29,12 @@ export default function SideBar() {
                     </button>
                     <List>
                         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                            <ListItem key={text} disablePadding>
-                                <CartItem />
-                            </ListItem>
+                            // <ListItem key={text} disablePadding>
+                            //     <CartItem />
+                            // </ListItem>
+                            <div className='test'>
+                                <h1>Teste</h1>
+                            </div>
                         ))}
                     </List>
                 </div>
