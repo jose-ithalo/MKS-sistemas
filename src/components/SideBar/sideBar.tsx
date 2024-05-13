@@ -26,7 +26,7 @@ export default function SideBar() {
                         <p>Carrinho</p>
                         <p>de Compras</p>
                     </div>
-                    <button className='btnClose' onClick={toggleDrawer(false)}>
+                    <button onClick={toggleDrawer(false)}>
                         <img src={closeIcon} alt="Fechar" />
                     </button>
                 </div>
