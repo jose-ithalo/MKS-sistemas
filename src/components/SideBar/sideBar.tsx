@@ -18,30 +18,29 @@ export default function SideBar() {
     };
 
     const DrawerList = (
-        <Box sx={{ height: "100vh", color: "#FFFFFF" }}
+        <Box sx={{ height: "100vh", backgroundColor: "#0F52BA", color: "#FFFFFF" }}
             role="presentation">
             <div className="shoppingCart">
-                <div className="shoppingCart__products">
-                    <p>Carrinho</p>
-                    <p>de Compras</p>
+                <div className='shoppingCart__header'>
+                    <div>
+                        <p>Carrinho</p>
+                        <p>de Compras</p>
+                    </div>
                     <button className='btnClose' onClick={toggleDrawer(false)}>
                         <img src={closeIcon} alt="Fechar" />
                     </button>
-                    <List>
-                        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                            // <ListItem key={text} disablePadding>
-                            //     <CartItem />
-                            // </ListItem>
-                            <div className='test'>
-                                <h1>Teste</h1>
-                            </div>
-                        ))}
-                    </List>
                 </div>
-                <div className="priceArea">
-                    <span>Total:</span>
-                    <span>R$798</span>
-                </div>
+                <List>
+                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                        <ListItem key={text} disablePadding>
+                            <CartItem />
+                        </ListItem>
+                    ))}
+                </List>
+            </div>
+            <div className="priceArea">
+                <span>Total:</span>
+                <span>R$798</span>
             </div>
             <button className='btnFinish'>
                 Finalizar Compra
