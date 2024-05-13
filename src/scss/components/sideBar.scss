@@ -1,32 +1,14 @@
-.btnClose {
-    @extend .btn;
-    border-radius: 50%;
-    position: absolute;
-    top: 5rem;
-    right: 2.5rem;
-
-    height: 3.8rem;
-    width: 3.8rem;
-}
-
 .btnFinish {
     @extend .btn;
     font-size: 2.8rem;
     font-weight: 700;
-    padding: 2.5rem;
     transition: all 1s;
+    height: 15%;
     width: 100%;
 
     &:hover {
         background-color: lighten($color-btn, $amount: 15%);
     }
-}
-
-.test {
-    background-color: red;
-    margin: 7rem 0;
-    height: 15rem;
-    width: 20rem;
 }
 
 .MuiBox-root {
@@ -42,6 +24,19 @@
         font-size: 2.7rem;
         font-weight: 700;
     }
+
+    ::-webkit-scrollbar {
+        width: 12px;
+        border: 5px solid $color-page;
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #070752;
+        border: 2px solid #c8c8c8;
+        border-radius: 15px;
+    }
+
 }
 
 .MuiList-root {
@@ -51,6 +46,9 @@
 .priceArea {
     display: flex;
     justify-content: space-between;
+    margin: 2rem 0;
+    padding: 0 4.5rem;
+    width: 100%;
 
     span {
         font-size: 2.8rem;
@@ -79,14 +77,28 @@
 }
 
 .shoppingCart {
-    background-color: $color-header;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 4.5rem 4.5rem 3rem 4.5rem;
+
+    height: 85%;
     width: 100%;
+
+    overflow-y: scroll;
 }
 
+.shoppingCart__header {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        @extend .btn;
+        border-radius: 50%;
+        margin-right: -2.5rem;
+        height: 3.8rem;
+        width: 3.8rem;
+    }
+}
 
 @media(max-width: 649px) {
 
@@ -103,14 +115,30 @@
         width: 100%;
     }
 
-    .shoppingCart__products {
+    .shoppingCart {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    .shoppingCart__header {
+        justify-content: center;
+        width: 100%;
+
+        button {
+            margin-right: unset;
+            position: relative;
+            left: 17rem;
+        }
+    }
 }
 
 @media(min-width: 650px) and (max-width: 1400px) {
+
+    .btnFinish {
+        height: 10%;
+    }
+
     .MuiBox-root {
         width: 40rem;
 
@@ -121,5 +149,9 @@
 
     .priceArea span {
         font-size: 2rem;
+    }
+
+    .shoppingCart {
+        height: 90%;
     }
 }
