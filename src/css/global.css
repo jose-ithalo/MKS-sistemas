@@ -123,31 +123,15 @@
   font-weight: 300;
 }
 
-.btnClose {
-  border-radius: 50%;
-  position: absolute;
-  top: 5rem;
-  right: 2.5rem;
-  height: 3.8rem;
-  width: 3.8rem;
-}
-
 .btnFinish {
   font-size: 2.8rem;
   font-weight: 700;
-  padding: 2.5rem;
   transition: all 1s;
+  height: 15%;
   width: 100%;
 }
 .btnFinish:hover {
   background-color: #262626;
-}
-
-.test {
-  background-color: red;
-  margin: 7rem 0;
-  height: 15rem;
-  width: 20rem;
 }
 
 .MuiBox-root {
@@ -162,6 +146,16 @@
   font-size: 2.7rem;
   font-weight: 700;
 }
+.MuiBox-root ::-webkit-scrollbar {
+  width: 12px;
+  border: 5px solid #FFFFFF;
+  border-radius: 5px;
+}
+.MuiBox-root ::-webkit-scrollbar-thumb {
+  background-color: #070752;
+  border: 2px solid #c8c8c8;
+  border-radius: 15px;
+}
 
 .MuiList-root {
   margin-top: 3.5rem !important;
@@ -170,6 +164,9 @@
 .priceArea {
   display: flex;
   justify-content: space-between;
+  margin: 2rem 0;
+  padding: 0 4.5rem;
+  width: 100%;
 }
 .priceArea span {
   font-size: 2.8rem;
@@ -196,12 +193,23 @@
 }
 
 .shoppingCart {
-  background-color: #0F52BA;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 4.5rem 4.5rem 3rem 4.5rem;
+  height: 85%;
   width: 100%;
+  overflow-y: scroll;
+}
+
+.shoppingCart__header {
+  display: flex;
+  justify-content: space-between;
+}
+.shoppingCart__header button {
+  border-radius: 50%;
+  margin-right: -2.5rem;
+  height: 3.8rem;
+  width: 3.8rem;
 }
 
 @media (max-width: 649px) {
@@ -215,13 +223,25 @@
   .MuiList-root {
     width: 100%;
   }
-  .shoppingCart__products {
+  .shoppingCart {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  .shoppingCart__header {
+    justify-content: center;
+    width: 100%;
+  }
+  .shoppingCart__header button {
+    margin-right: unset;
+    position: relative;
+    left: 17rem;
+  }
 }
 @media (min-width: 650px) and (max-width: 1400px) {
+  .btnFinish {
+    height: 10%;
+  }
   .MuiBox-root {
     width: 40rem;
   }
@@ -230,6 +250,9 @@
   }
   .priceArea span {
     font-size: 2rem;
+  }
+  .shoppingCart {
+    height: 90%;
   }
 }
 .cartItem {
@@ -311,7 +334,7 @@
   padding: 0;
 }
 
-.btn, .btnClose, .btnFinish, .cartItem__removeBtn {
+.btn, .btnFinish, .shoppingCart__header button, .cartItem__removeBtn {
   background-color: #000000;
   border: none;
   color: #FFFFFF;
