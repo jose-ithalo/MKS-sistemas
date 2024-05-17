@@ -1,9 +1,19 @@
 import shopBag from "../../assets/shopping-bag.svg";
 import appWatch from "../../assets/apple-watch.png";
 
+import { motion } from "framer-motion";
+import { useState } from "react";
+
 function Card() {
+
+    const [move, setMove] = useState<number[]>([0]);
+
+    function actionPurchase() {
+        setMove([0, 200, 200, 0]);
+    }
+
     return (
-        <div className="card">
+        <motion.div className="card" onClick={actionPurchase}>
             <div className="card__info">
                 <img src={appWatch} alt="Produto" />
                 <div>
@@ -13,10 +23,13 @@ function Card() {
                 <p>Redesigned from scratch and completely revised.</p>
             </div>
             <div className="card__bottom">
-                <img src={shopBag} alt="Sacola" />
+                <motion.img src={shopBag} alt="Sacola"
+                    animate={{ rotate: move }}
+                    transition={{ duration: 1 }}
+                />
                 <span>COMPRAR</span>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
