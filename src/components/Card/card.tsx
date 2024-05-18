@@ -10,10 +10,14 @@ function Card() {
 
     function actionPurchase() {
         setMove([0, 200, 200, 0]);
+
+        setTimeout(() => {
+            setMove([0]);
+        }, 1000);
     }
 
     return (
-        <motion.div className="card" onClick={actionPurchase}>
+        <motion.div className="card" onClick={actionPurchase} >
             <div className="card__info">
                 <img src={appWatch} alt="Produto" />
                 <div>
@@ -25,7 +29,6 @@ function Card() {
             <div className="card__bottom">
                 <motion.img src={shopBag} alt="Sacola"
                     animate={{ rotate: move }}
-                    transition={{ duration: 1 }}
                 />
                 <span>COMPRAR</span>
             </div>
