@@ -8,6 +8,7 @@ import CartItem from "../CartItem/cartItem";
 import carIcon from "../../assets/car.svg";
 import closeIcon from "../../assets/x-icon.svg";
 
+import { motion } from 'framer-motion';
 import { useState } from "react";
 
 export default function SideBar() {
@@ -50,10 +51,13 @@ export default function SideBar() {
 
     return (
         <div>
-            <div className="purchaseArea" onClick={toggleDrawer(true)}>
+            <motion.div className="purchaseArea" onClick={toggleDrawer(true)}
+                initial={{ x: '100vw' }} animate={{ x: 0 }}
+                transition={{ duration: 1, type: 'spring', mass: 0.8, stiffness: 80 }}
+            >
                 <img src={carIcon} alt="Carrinho" />
                 <span>0</span>
-            </div>
+            </motion.div>
             <Drawer open={open} anchor='right' onClose={toggleDrawer(false)}>
                 {DrawerList}
             </Drawer>
