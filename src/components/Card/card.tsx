@@ -9,7 +9,7 @@ function Card() {
     const [move, setMove] = useState<number[]>([0]);
 
     function actionPurchase() {
-        setMove([0, 200, 200, 0]);
+        setMove([0, 360, 0]);
 
         setTimeout(() => {
             setMove([0]);
