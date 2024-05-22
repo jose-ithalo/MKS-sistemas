@@ -7,7 +7,7 @@ function Header() {
         <header className='headerContainer'>
             <motion.div className="headerTitle"
                 initial={{ x: '-100vw' }} animate={{ x: 0 }}
-                transition={{ duration: 1, type: 'spring', mass: 0.8, stiffness: 80 }}
+                transition={{ type: 'spring', mass: 0.8, stiffness: 80 }}
             >
                 <h1>MKS</h1>
                 <span>Sistemas</span>
