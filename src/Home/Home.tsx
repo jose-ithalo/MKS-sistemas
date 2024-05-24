@@ -1,5 +1,6 @@
 import "../css/global.css";
 
+import { FileProvider } from "../contexts/fileContext";
 import Header from "../components/Header/header";
 import Card from "../components/Card/card";
 import Footer from "../components/Footer/footer";
@@ -8,15 +9,17 @@ const itemsList: string[] = ['Watch', "Watch2", "Watch3", "Watch4", "Watch5", "W
 
 function Home() {
     return (
-        <div className="containerHome">
-            <Header />
-            <div className="productsArea">
-                {itemsList.map((item, index) => (
-                    <Card key={index} />
-                ))}
+        <FileProvider>
+            <div className="containerHome">
+                <Header />
+                <div className="productsArea">
+                    {itemsList.map((item, index) => (
+                        <Card key={index} />
+                    ))}
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </FileProvider>
     );
 }
 
