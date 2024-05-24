@@ -1,12 +1,8 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { FileContext } from "../contexts/fileContext";
 
 function useList() {
-    const [cartList, setCartList] = useState<string[]>(['Inbox', 'Starred', 'Send email', 'Drafts']);
-
-    return {
-        cartList,
-        setCartList
-    }
+    return useContext(FileContext);
 }
 
 export default useList;
