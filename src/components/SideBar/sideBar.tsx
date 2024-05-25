@@ -9,6 +9,7 @@ import carIcon from "../../assets/car.svg";
 import closeIcon from "../../assets/x-icon.svg";
 
 import useList from '../../hooks/useList';
+import ListType from '../../types/listType';
 
 import { motion } from 'framer-motion';
 import { useState } from "react";
@@ -16,7 +17,7 @@ import { useState } from "react";
 export default function SideBar() {
     const [open, setOpen] = useState(false);
 
-    const { cartList } = useList();
+    const { cartList } = useList() as ListType;
 
     const toggleDrawer = (newOpen: boolean) => () => {
         setOpen(newOpen);
