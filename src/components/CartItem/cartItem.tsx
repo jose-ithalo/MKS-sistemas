@@ -5,10 +5,16 @@ import useList from "../../hooks/useList";
 import ItemType from "../../types/itemType";
 import ListType from "../../types/listType";
 
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+
 
 function CartItem({ itemIndex }: ItemType) {
 
     const { cartList, setCartList } = useList() as ListType;
+
+    const [baseItem, setBaseItem] = useState<number | string>(0);
+    const itemRef = useRef<HTMLDivElement>(null);
 
     function removeItem() {
 
@@ -16,12 +22,18 @@ function CartItem({ itemIndex }: ItemType) {
 
         newList.splice(itemIndex, 1);
 
-        setCartList(newList);
+        setBaseItem('-100vw');
 
+        setTimeout(() => {
+            itemRef.current!.style.display = 'none';
+            setCartList(newList);
+        }, 500);
     }
 
     return (
-        <div className="cartItem">
+        <motion.div className="cartItem" ref={itemRef}
+            animate={{ x: baseItem }} transition={{ duration: 1.5 }}
+        >
             <button className="cartItem__removeBtn" onClick={removeItem}>
                 <img src={closeIcon} alt="Remover" />
             </button>
@@ -34,7 +46,7 @@ function CartItem({ itemIndex }: ItemType) {
                 <button>+</button>
             </div>
             <h2>R$399</h2>
-        </div>
+        </motion.div>
     );
 }
 
