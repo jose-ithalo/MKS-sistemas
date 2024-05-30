@@ -2,14 +2,14 @@ import closeIcon from "../../assets/x-icon.svg";
 import appWatch from "../../assets/apple-watch.png";
 
 import useList from "../../hooks/useList";
-import ItemType from "../../types/itemType";
+import CartType from "../../types/cartType";
 import ListType from "../../types/listType";
 
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 
-function CartItem({ itemIndex }: ItemType) {
+function CartItem({ itemIndex }: CartType) {
 
     const { cartList, setCartList } = useList() as ListType;
 
