@@ -26,7 +26,7 @@ function Card({ name, description, photo, price }: ItemType) {
                     <h2>{name}</h2>
                     <h3>R${price}</h3>
                 </div>
-                <p>Redesigned from scratch and completely revised.</p>
+                <p>{description}</p>
             </div>
             <div className="card__bottom">
                 <motion.img src={shopBag} alt="Sacola"
