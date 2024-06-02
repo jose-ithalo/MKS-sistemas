@@ -84,6 +84,9 @@
 .card:hover .card__bottom {
   background-color: #07285c;
 }
+.card:hover .card__desc {
+  font-weight: 500;
+}
 
 .card__bottom {
   background-color: #0F52BA;
@@ -109,11 +112,22 @@
   font-weight: 600;
 }
 
+.card__desc {
+  color: #2C2C2C;
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .card__info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
   padding: 2rem 1rem 0 1rem;
 }
 .card__info div {
@@ -134,18 +148,6 @@
   color: #FFFFFF;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
-}
-.card__info p {
-  color: #2C2C2C;
-  font-size: 1rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
-  max-width: 100%;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .btnFinish {
