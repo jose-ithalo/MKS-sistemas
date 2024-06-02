@@ -2,6 +2,7 @@ import shopBag from "../../assets/shopping-bag.svg";
 import appWatch from "../../assets/apple-watch.png";
 
 import ItemType from "../../types/itemType";
+import showDescType from "../../types/showDescType";
 
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -9,6 +10,11 @@ import { useState } from "react";
 function Card({ name, description, photo, price }: ItemType) {
 
     const [move, setMove] = useState<number[]>([0]);
+    const [showDesc, setShowDesc] = useState<showDescType>({
+        height: '',
+        duration: 0,
+        display: ''
+    });
 
     function actionPurchase() {
         setMove([0, 360, 0]);
@@ -18,15 +24,38 @@ function Card({ name, description, photo, price }: ItemType) {
         }, 1000);
     }
 
+    function showDescription() {
+        setShowDesc({
+            height: "60px",
+            duration: 1.3,
+            display: 'unset'
+        });
+    }
+
+    function hideDescription() {
+        setShowDesc({
+            height: '28px',
+            duration: 1.1,
+            display: '-webkit-box'
+        });
+    }
+
     return (
-        <motion.div className="card" onClick={actionPurchase} >
+        <motion.div className="card" onClick={actionPurchase}
+            onMouseEnter={showDescription} onMouseLeave={hideDescription}
+        >
             <div className="card__info">
                 <img src={appWatch} alt="Produto" />
                 <div>
                     <h2>{name}</h2>
                     <h3>R${price}</h3>
                 </div>
-                <p>{description}</p>
+                <motion.p className="card__desc"
+                    animate={{ display: showDesc.display, height: showDesc.height }}
+                    transition={{ duration: showDesc.duration }}
+                >
+                    {description}
+                </motion.p>
             </div>
             <div className="card__bottom">
                 <motion.img src={shopBag} alt="Sacola"
