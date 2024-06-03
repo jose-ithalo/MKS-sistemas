@@ -149,6 +149,10 @@
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
 }
+.card__info img {
+  height: 13.8rem;
+  width: 12rem;
+}
 
 @media (max-width: 535px) {
   .card {

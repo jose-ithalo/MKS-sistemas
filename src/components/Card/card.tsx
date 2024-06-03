@@ -1,5 +1,4 @@
 import shopBag from "../../assets/shopping-bag.svg";
-import appWatch from "../../assets/apple-watch.png";
 
 import ItemType from "../../types/itemType";
 import showDescType from "../../types/showDescType";
@@ -45,7 +44,7 @@ function Card({ name, description, photo, price }: ItemType) {
             onMouseEnter={showDescription} onMouseLeave={hideDescription}
         >
             <div className="card__info">
-                <img src={appWatch} alt="Produto" />
+                <img src={photo} alt="Produto" />
                 <div>
                     <h2>{name}</h2>
                     <h3>R${price}</h3>
