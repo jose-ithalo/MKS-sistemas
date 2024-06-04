@@ -11,6 +11,10 @@
     }
 }
 
+.button__close-mobile {
+    display: none;
+}
+
 .MuiBox-root {
     display: flex;
     flex-direction: column;
@@ -112,9 +116,17 @@
         width: 100%;
     }
 
+    .button__close-desktop {
+        display: none;
+    }
+
+    .button__close-mobile {
+        display: unset;
+    }
+
     .MuiBox-root {
         align-items: center;
-        width: 100vw;
+        width: calc(100vw - 4rem);
     }
 
     .MuiList-root {
@@ -129,16 +141,6 @@
 
     .shoppingCart__header {
         width: 100%;
-
-        button {
-            margin-right: unset;
-
-        }
-
-        div {
-            margin: 0 auto;
-            text-align: center;
-        }
     }
 }
 
