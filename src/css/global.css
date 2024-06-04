@@ -180,6 +180,10 @@
   background-color: #262626;
 }
 
+.button__close-mobile {
+  display: none;
+}
+
 .MuiBox-root {
   display: flex;
   flex-direction: column;
@@ -267,9 +271,15 @@
   .btnFinish {
     width: 100%;
   }
+  .button__close-desktop {
+    display: none;
+  }
+  .button__close-mobile {
+    display: unset;
+  }
   .MuiBox-root {
     align-items: center;
-    width: 100vw;
+    width: calc(100vw - 4rem);
   }
   .MuiList-root {
     width: 100%;
@@ -281,13 +291,6 @@
   }
   .shoppingCart__header {
     width: 100%;
-  }
-  .shoppingCart__header button {
-    margin-right: unset;
-  }
-  .shoppingCart__header div {
-    margin: 0 auto;
-    text-align: center;
   }
 }
 @media (min-width: 650px) and (max-width: 1400px) {

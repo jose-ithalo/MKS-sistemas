@@ -7,6 +7,7 @@ import CartItem from "../CartItem/cartItem";
 
 import carIcon from "../../assets/car.svg";
 import closeIcon from "../../assets/x-icon.svg";
+import closeIconMobile from "../../assets/x-icon2.svg";
 
 import useList from '../../hooks/useList';
 import ListType from '../../types/listType';
@@ -33,7 +34,8 @@ export default function SideBar() {
                         <p>de Compras</p>
                     </div>
                     <button onClick={toggleDrawer(false)}>
-                        <img src={closeIcon} alt="Fechar" />
+                        <img className="button__close-desktop" src={closeIcon} alt="Fechar" />
+                        <img className="button__close-mobile" src={closeIconMobile} alt="Fechar" />
                     </button>
                 </div>
                 <List>
