@@ -32,7 +32,7 @@ function CartItem({ itemIndex }: CartType) {
 
     return (
         <motion.div className="cartItem" ref={itemRef}
-            animate={{ x: baseItem }} transition={{ duration: 1.5 }}
+            animate={{ x: baseItem }} transition={{ duration: 1 }}
         >
             <button className="cartItem__removeBtn" onClick={removeItem}>
                 <img src={closeIcon} alt="Remover" />
