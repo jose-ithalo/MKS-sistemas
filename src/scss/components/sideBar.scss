@@ -108,6 +108,12 @@
     .shoppingCart {
         padding: 4.5rem 2rem 0 2rem;
     }
+
+    .shoppingCart__header {
+        button {
+            margin-right: unset;
+        }
+    }
 }
 
 @media(max-width: 649px) {
