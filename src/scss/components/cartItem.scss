@@ -10,23 +10,18 @@
     padding: 1.5rem 2.5rem;
     position: relative;
     width: 100%;
+}
+
+.cartItem__finalPart {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
 
     p {
         color: $color-desc;
         font-size: 1.3rem;
         font-weight: 400;
         max-width: 10rem;
-    }
-}
-
-.cartItem__finalPart {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    h2 {
-        font-size: 1.4rem;
-        margin-left: 0.5rem;
     }
 }
 
@@ -49,6 +44,18 @@
 
     img {
         width: 0.8rem;
+    }
+}
+
+.orderArea {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+
+    h2 {
+        font-size: 1.4rem;
+        margin-left: 0.5rem;
     }
 }
 
@@ -91,30 +98,40 @@
 
 }
 
-// @media(max-width:400px) {
+@media(max-width:470px) {
 
-//     .cartItem {
-//         padding: 1.2rem 1rem;
-//     }
-// }
+    .cartItem {
+        padding: 1.2rem 0;
+    }
+}
 
 @media(max-width: 600px) {
+
     .cartItem {
         flex-direction: column;
+        justify-content: space-around;
         height: 22rem;
+    }
+
+    .cartItem__finalPart {
+        flex-direction: column;
+        text-align: center;
+        width: 21rem;
 
         p {
             font-size: 1.6rem;
+            margin-bottom: 1rem;
             max-width: 100%;
         }
     }
 
-    .cartItem__finalPart {
-        width: 100%;
-    }
-
     .cartItem__img {
         width: 8rem;
+    }
+
+    .orderArea {
+        justify-content: space-between;
+        width: 100%;
     }
 
     .qtdBox {
