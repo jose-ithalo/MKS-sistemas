@@ -38,15 +38,17 @@ function CartItem({ itemIndex }: CartType) {
                 <img src={closeIcon} alt="Remover" />
             </button>
             <img className="cartItem__img" src={appWatch} alt="Produto" />
-            <p>Apple Watch Series 4 GPS</p>
             <div className="cartItem__finalPart">
-                <div className="qtdBox">
-                    <span>Qtd:</span>
-                    <button>-</button>
-                    <h3>1</h3>
-                    <button>+</button>
+                <p>Apple Watch Series 4 GPS</p>
+                <div className="orderArea">
+                    <div className="qtdBox">
+                        <span>Qtd:</span>
+                        <button>-</button>
+                        <h3>1</h3>
+                        <button>+</button>
+                    </div>
+                    <h2>R$399</h2>
                 </div>
-                <h2>R$399</h2>
             </div>
         </motion.div>
     );
