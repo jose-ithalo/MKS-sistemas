@@ -17,7 +17,7 @@ function Home() {
 
     const { data, error, isLoading } = useQuery("items", async () => {
         const response = await axios.get(`${urlApi}`);
-        const itemList: ItemType[] = response.data.products
+        const itemList: ItemType[] = response.data.products;
         return itemList;
     }, {
         retry: 3,
@@ -31,8 +31,6 @@ function Home() {
     if (error) {
         return <div>Ocorreu um erro!</div>
     }
-
-    console.log(data);
 
     return (
         <FileProvider>
