@@ -132,6 +132,13 @@
     .orderArea {
         justify-content: space-between;
         width: 100%;
+
+        h2 {
+            background-color: $color-accent;
+            border-radius: 2px;
+            color: $color-page;
+            padding: 0.7rem;
+        }
     }
 
     .qtdBox {
