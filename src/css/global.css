@@ -358,6 +358,15 @@
   width: 0.8rem;
 }
 
+.cartItem__removeBtn__mobile {
+  all: unset;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
 .orderArea {
   display: flex;
   align-items: center;
@@ -424,6 +433,12 @@
   }
   .cartItem__img {
     width: 8rem;
+  }
+  .cartItem__removeBtn {
+    display: none;
+  }
+  .cartItem__removeBtn__mobile {
+    display: block;
   }
   .orderArea {
     justify-content: space-between;

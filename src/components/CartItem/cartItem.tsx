@@ -1,4 +1,5 @@
 import closeIcon from "../../assets/x-icon.svg";
+import closeIconMobile from "../../assets/x-icon3.svg";
 import appWatch from "../../assets/apple-watch.png";
 
 import useList from "../../hooks/useList";
@@ -36,6 +37,9 @@ function CartItem({ itemIndex }: CartType) {
         >
             <button className="cartItem__removeBtn" onClick={removeItem}>
                 <img src={closeIcon} alt="Remover" />
+            </button>
+            <button className="cartItem__removeBtn__mobile" onClick={removeItem}>
+                <img src={closeIconMobile} alt="Remover" />
             </button>
             <img className="cartItem__img" src={appWatch} alt="Produto" />
             <div className="cartItem__finalPart">
