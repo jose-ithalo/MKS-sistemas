@@ -430,10 +430,24 @@
     width: 100%;
   }
   .orderArea h2 {
+    align-content: center;
     background-color: #373737;
-    border-radius: 2px;
+    border-radius: 5px;
     color: #FFFFFF;
-    padding: 0.7rem;
+    height: 3.5rem;
+    width: 8.4rem;
+  }
+  .qtdBox {
+    margin-top: 0;
+    height: 3.5rem;
+    width: 9.7rem;
+  }
+  .qtdBox button {
+    font-size: 2rem;
+  }
+  .qtdBox h3 {
+    font-size: 2rem;
+    padding: 0 1rem;
   }
   .qtdBox span {
     display: none;
