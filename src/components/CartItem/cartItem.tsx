@@ -15,6 +15,7 @@ function CartItem({ itemIndex }: CartType) {
     const { cartList, setCartList } = useList() as ListType;
 
     const [baseItem, setBaseItem] = useState<number | string>(0);
+    let [quantItem, setQuantItem] = useState<number>(1);
     const itemRef = useRef<HTMLDivElement>(null);
 
     function removeItem() {
@@ -29,6 +30,18 @@ function CartItem({ itemIndex }: CartType) {
             itemRef.current!.style.display = 'none';
             setCartList(newList);
         }, 500);
+    }
+
+    function increaseItem() {
+        setQuantItem(quantItem += 1);
+    }
+
+    function decreaseItem() {
+        if (quantItem === 1) {
+            return
+        };
+
+        setQuantItem(quantItem -= 1);
     }
 
     return (
@@ -47,9 +60,9 @@ function CartItem({ itemIndex }: CartType) {
                 <div className="orderArea">
                     <div className="qtdBox">
                         <span>Qtd:</span>
-                        <button>-</button>
-                        <h3>1</h3>
-                        <button>+</button>
+                        <button onClick={decreaseItem}>-</button>
+                        <h3>{quantItem}</h3>
+                        <button onClick={increaseItem}>+</button>
                     </div>
                     <h2>R$399</h2>
                 </div>
