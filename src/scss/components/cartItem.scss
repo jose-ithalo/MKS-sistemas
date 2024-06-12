@@ -75,7 +75,6 @@
     align-items: center;
     justify-content: space-evenly;
 
-    font-size: 1rem;
     margin-top: 0.3rem;
     padding: 1rem 0.5rem;
     position: relative;
@@ -86,6 +85,7 @@
     button {
         all: unset;
         cursor: pointer;
+        font-size: 1.2rem;
 
         &:active {
             transform: scale(1.8);
@@ -95,8 +95,10 @@
     h3 {
         border-left: 0.2px solid #BFBFBF;
         border-right: 0.2px solid #BFBFBF;
+        font-size: 1rem;
         font-weight: 400;
-        padding: 0 0.5rem;
+        text-align: center;
+        width: 55%;
     }
 
     span {
@@ -173,7 +175,7 @@
 
         h3 {
             font-size: 2rem;
-            padding: 0 1rem;
+            width: 40%;
         }
 
         span {
