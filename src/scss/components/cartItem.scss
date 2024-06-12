@@ -59,7 +59,7 @@
 .orderArea {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 0.4rem;
     width: 50%;
 
     h2 {
@@ -80,7 +80,7 @@
     position: relative;
 
     height: 1.9rem;
-    width: 5rem;
+    min-width: 5rem;
 
     button {
         all: unset;
@@ -181,5 +181,11 @@
         span {
             display: none;
         }
+    }
+}
+
+@media (min-width: 650px) and (max-width: 1400px) {
+    .orderArea {
+        flex-direction: column;
     }
 }
