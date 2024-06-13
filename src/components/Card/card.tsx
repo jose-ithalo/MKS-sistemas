@@ -1,12 +1,17 @@
 import shopBag from "../../assets/shopping-bag.svg";
 
+import useList from "../../hooks/useList";
+
 import ItemType from "../../types/itemType";
+import ListType from "../../types/listType";
 import showDescType from "../../types/showDescType";
 
 import { motion } from "framer-motion";
 import { useState } from "react";
 
 function Card({ name, description, photo, price }: ItemType) {
+
+    const { cartList, setCartList } = useList() as ListType;
 
     const [move, setMove] = useState<number[]>([0]);
     const [showDesc, setShowDesc] = useState<showDescType>({
@@ -16,6 +21,23 @@ function Card({ name, description, photo, price }: ItemType) {
     });
 
     function actionPurchase() {
+
+        type Keys = 'name' | 'price' | 'photo';
+
+        const newItem: Pick<ItemType, Keys> = {
+            name,
+            price,
+            photo
+        }
+
+        const newCartList = [...cartList];
+
+        newCartList.push(newItem);
+
+        setCartList(newCartList);
+
+        console.log(cartList);
+
         setMove([0, 360, 0]);
 
         setTimeout(() => {
