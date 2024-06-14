@@ -39,9 +39,11 @@ export default function SideBar() {
                     </button>
                 </div>
                 <List>
-                    {cartList.map((text, index) => (
-                        <ListItem key={text} disablePadding>
-                            <CartItem itemIndex={index} />
+                    {cartList.map((item, index) => (
+                        <ListItem key={index} disablePadding>
+                            <CartItem
+                                itemIndex={index} itemName={item.name} itemPrice={item.price} itemPhoto={item.photo}
+                            />
                         </ListItem>
                     ))}
                 </List>
