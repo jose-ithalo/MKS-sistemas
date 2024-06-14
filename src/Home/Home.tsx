@@ -32,6 +32,10 @@ function Home() {
         return <div>Ocorreu um erro!</div>
     }
 
+    // for (let item of data!) {
+    //     console.log(item.id);
+    // }
+
     return (
         <FileProvider>
             <div className="containerHome">
