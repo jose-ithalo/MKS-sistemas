@@ -32,10 +32,6 @@ function Home() {
         return <div>Ocorreu um erro!</div>
     }
 
-    // for (let item of data!) {
-    //     console.log(item.id);
-    // }
-
     return (
         <FileProvider>
             <div className="containerHome">
@@ -45,7 +41,7 @@ function Home() {
                     transition={{ delay: 1.2, duration: 1.5 }}
                 >
                     {data!.map((item, index) => (
-                        <Card key={index} name={item.name} description={item.description}
+                        <Card key={index} id={item.id} name={item.name} description={item.description}
                             photo={item.photo} price={item.price} />
                     ))}
                 </motion.main>
