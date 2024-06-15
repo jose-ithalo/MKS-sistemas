@@ -1,6 +1,6 @@
 import ItemType from "./itemType";
 
-type Keys = 'name' | 'price' | 'photo';
+type Keys = 'id' | 'name' | 'price' | 'photo';
 
 type ListType = {
     cartList: Pick<ItemType, Keys>[]
