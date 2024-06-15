@@ -10,7 +10,7 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 
-function CartItem({ itemIndex }: CartType) {
+function CartItem({ itemIndex, itemName, itemPrice, itemPhoto }: CartType) {
 
     const { cartList, setCartList } = useList() as ListType;
 
@@ -56,7 +56,7 @@ function CartItem({ itemIndex }: CartType) {
             </button>
             <img className="cartItem__img" src={appWatch} alt="Produto" />
             <div className="cartItem__finalPart">
-                <p>Apple Watch Series 4 GPS</p>
+                <p>{itemName}</p>
                 <div className="orderArea">
                     <div className="qtdBox">
                         <span>Qtd:</span>
