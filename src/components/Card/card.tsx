@@ -9,7 +9,7 @@ import showDescType from "../../types/showDescType";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-function Card({ name, description, photo, price }: ItemType) {
+function Card({ id, name, description, photo, price }: ItemType) {
 
     const { cartList, setCartList } = useList() as ListType;
 
@@ -22,15 +22,25 @@ function Card({ name, description, photo, price }: ItemType) {
 
     function actionPurchase() {
 
-        type Keys = 'name' | 'price' | 'photo';
+        type Keys = 'id' | 'name' | 'price' | 'photo';
 
         const newItem: Pick<ItemType, Keys> = {
+            id,
             name,
             price,
             photo
         }
 
         const newCartList = [...cartList];
+
+        const repeatedItem = newCartList.find(function (item) {
+            return item.id === id
+        });
+
+        if (repeatedItem) {
+            console.log('Repetido!');
+            return
+        }
 
         newCartList.push(newItem);
 

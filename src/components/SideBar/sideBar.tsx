@@ -39,10 +39,10 @@ export default function SideBar() {
                     </button>
                 </div>
                 <List>
-                    {cartList.map((item, index) => (
-                        <ListItem key={index} disablePadding>
+                    {cartList.map((item) => (
+                        <ListItem key={item.id} disablePadding>
                             <CartItem
-                                itemIndex={index} itemName={item.name} itemPrice={item.price} itemPhoto={item.photo}
+                                itemIndex={item.id} itemName={item.name} itemPrice={item.price} itemPhoto={item.photo}
                             />
                         </ListItem>
                     ))}
