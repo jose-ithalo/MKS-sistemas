@@ -65,7 +65,7 @@ export default function SideBar() {
                 transition={{ delay: 0.8, type: 'spring', mass: 0.8, stiffness: 80 }}
             >
                 <img src={carIcon} alt="Carrinho" />
-                <span>0</span>
+                <span>{cartList.length}</span>
             </motion.div>
             <Drawer open={open} anchor='right' onClose={toggleDrawer(false)}>
                 {DrawerList}
