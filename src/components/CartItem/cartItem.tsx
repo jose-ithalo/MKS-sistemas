@@ -1,6 +1,5 @@
 import closeIcon from "../../assets/x-icon.svg";
 import closeIconMobile from "../../assets/x-icon3.svg";
-import appWatch from "../../assets/apple-watch.png";
 
 import useList from "../../hooks/useList";
 import CartType from "../../types/cartType";
@@ -54,7 +53,7 @@ function CartItem({ itemIndex, itemName, itemPrice, itemPhoto }: CartType) {
             <button className="cartItem__removeBtn__mobile" onClick={removeItem}>
                 <img src={closeIconMobile} alt="Remover" />
             </button>
-            <img className="cartItem__img" src={appWatch} alt="Produto" />
+            <img className="cartItem__img" src={itemPhoto} alt="Produto" />
             <div className="cartItem__finalPart">
                 <p>{itemName}</p>
                 <div className="orderArea">
@@ -64,7 +63,7 @@ function CartItem({ itemIndex, itemName, itemPrice, itemPhoto }: CartType) {
                         <h3>{quantItem}</h3>
                         <button onClick={increaseItem}>+</button>
                     </div>
-                    <h2>R$399</h2>
+                    <h2>R${itemPrice}</h2>
                 </div>
             </div>
         </motion.div>
