@@ -20,7 +20,8 @@ function Card({ id, name, description, photo, price }: ItemType) {
         display: ''
     });
 
-    function actionPurchase() {
+    function addProduct
+        () {
 
         type Keys = 'id' | 'name' | 'price' | 'photo';
 
@@ -46,8 +47,6 @@ function Card({ id, name, description, photo, price }: ItemType) {
 
         setCartList(newCartList);
 
-        console.log(cartList);
-
         setMove([0, 360, 0]);
 
         setTimeout(() => {
@@ -72,7 +71,9 @@ function Card({ id, name, description, photo, price }: ItemType) {
     }
 
     return (
-        <motion.div className="card" onClick={actionPurchase}
+        <motion.div className="card" onClick={addProduct
+
+        }
             onMouseEnter={showDescription} onMouseLeave={hideDescription}
         >
             <div className="card__info">
