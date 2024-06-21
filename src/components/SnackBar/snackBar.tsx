@@ -23,9 +23,9 @@ export default function AutohideSnackbar() {
             <Button onClick={handleClick}>Open Snackbar</Button>
             <Snackbar
                 open={open}
-                autoHideDuration={5000}
+                autoHideDuration={3000}
                 onClose={handleClose}
-                message="This Snackbar will be dismissed in 5 seconds."
+                message="Este produto já foi adicionado ao carrinho."
             />
         </div>
     );
