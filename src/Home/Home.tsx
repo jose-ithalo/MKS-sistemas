@@ -4,6 +4,7 @@ import { FileProvider } from "../contexts/fileContext";
 import Header from "../components/Header/header";
 import Card from "../components/Card/card";
 import Footer from "../components/Footer/footer";
+import AutohideSnackbar from "../components/SnackBar/snackBar";
 
 import ItemType from "../types/itemType";
 
@@ -36,6 +37,7 @@ function Home() {
         <FileProvider>
             <div className="containerHome">
                 <Header />
+                <AutohideSnackbar />
                 <motion.main className="productsArea"
                     initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                     transition={{ delay: 1.2, duration: 1.5 }}
