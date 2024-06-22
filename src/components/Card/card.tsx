@@ -11,7 +11,7 @@ import { useState } from "react";
 
 function Card({ id, name, description, photo, price }: ItemType) {
 
-    const { cartList, setCartList } = useList() as ListType;
+    const { cartList, setCartList, setOpenSnack } = useList() as ListType;
 
     const [move, setMove] = useState<number[]>([0]);
     const [showDesc, setShowDesc] = useState<showDescType>({
@@ -39,7 +39,7 @@ function Card({ id, name, description, photo, price }: ItemType) {
         });
 
         if (repeatedItem) {
-            console.log('Repetido!');
+            setOpenSnack(true);
             return
         }
 
