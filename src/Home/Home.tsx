@@ -37,7 +37,6 @@ function Home() {
         <FileProvider>
             <div className="containerHome">
                 <Header />
-                <AutohideSnackbar />
                 <motion.main className="productsArea"
                     initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                     transition={{ delay: 1.2, duration: 1.5 }}
@@ -48,6 +47,7 @@ function Home() {
                     ))}
                 </motion.main>
                 <Footer />
+                <AutohideSnackbar />
             </div>
         </FileProvider>
     );
