@@ -18,11 +18,17 @@ import { useState } from "react";
 export default function SideBar() {
     const [open, setOpen] = useState(false);
 
+    let totalPrice: number = 0;
+
     const { cartList } = useList() as ListType;
 
     const toggleDrawer = (newOpen: boolean) => () => {
         setOpen(newOpen);
-    };
+    }
+
+    for (let item of cartList) {
+        totalPrice += Number(item.price);
+    }
 
     const DrawerList = (
         <Box sx={{ height: "100vh", backgroundColor: "#0F52BA", color: "#FFFFFF" }}
@@ -50,7 +56,7 @@ export default function SideBar() {
             </div>
             <div className="priceArea">
                 <span>Total:</span>
-                <span>R$798</span>
+                <span>R${totalPrice}</span>
             </div>
             <button className='btnFinish'>
                 Finalizar Compra
