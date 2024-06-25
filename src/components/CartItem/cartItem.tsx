@@ -15,6 +15,7 @@ function CartItem({ itemIndex, itemName, itemPrice, itemPhoto }: CartType) {
 
     const [baseItem, setBaseItem] = useState<number | string>(0);
     let [quantItem, setQuantItem] = useState<number>(1);
+    let [totalPrice, setTotalPrice] = useState<number>(Number(itemPrice));
 
     function removeItem() {
 
@@ -33,6 +34,10 @@ function CartItem({ itemIndex, itemName, itemPrice, itemPhoto }: CartType) {
 
     function increaseItem() {
         setQuantItem(quantItem += 1);
+
+        setTotalPrice(quantItem * Number(itemPrice));
+
+        console.log(quantItem * Number(itemPrice));
     }
 
     function decreaseItem() {
@@ -63,7 +68,7 @@ function CartItem({ itemIndex, itemName, itemPrice, itemPhoto }: CartType) {
                         <h3>{quantItem}</h3>
                         <button onClick={increaseItem}>+</button>
                     </div>
-                    <h2>R${itemPrice}</h2>
+                    <h2>R${totalPrice}</h2>
                 </div>
             </div>
         </motion.div>
