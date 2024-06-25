@@ -18,7 +18,7 @@ import { useState } from "react";
 export default function SideBar() {
     const [open, setOpen] = useState(false);
 
-    let totalPrice: number = 0;
+    let allItemsPrice: number = 0;
 
     const { cartList } = useList() as ListType;
 
@@ -27,7 +27,7 @@ export default function SideBar() {
     }
 
     for (let item of cartList) {
-        totalPrice += Number(item.price);
+        allItemsPrice += Number(item.price);
     }
 
     const DrawerList = (
@@ -56,7 +56,7 @@ export default function SideBar() {
             </div>
             <div className="priceArea">
                 <span>Total:</span>
-                <span>R${totalPrice}</span>
+                <span>R${allItemsPrice}</span>
             </div>
             <button className='btnFinish'>
                 Finalizar Compra
