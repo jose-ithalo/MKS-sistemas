@@ -17,6 +17,8 @@ function CartItem({ itemIndex, itemName, itemPrice, itemPhoto }: CartType) {
     let [quantItem, setQuantItem] = useState<number>(1);
     let [totalPrice, setTotalPrice] = useState<number>(Number(itemPrice));
 
+    let unitPrice: number = Number(itemPrice);
+
     function removeItem() {
 
         const copyList = [...cartList];
@@ -35,9 +37,8 @@ function CartItem({ itemIndex, itemName, itemPrice, itemPhoto }: CartType) {
     function increaseItem() {
         setQuantItem(quantItem += 1);
 
-        setTotalPrice(quantItem * Number(itemPrice));
+        setTotalPrice(quantItem * unitPrice);
 
-        console.log(quantItem * Number(itemPrice));
     }
 
     function decreaseItem() {
@@ -46,6 +47,8 @@ function CartItem({ itemIndex, itemName, itemPrice, itemPhoto }: CartType) {
         };
 
         setQuantItem(quantItem -= 1);
+
+        setTotalPrice(totalPrice -= unitPrice);
     }
 
     return (
