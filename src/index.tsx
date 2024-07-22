@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "react-query";
 import "./css/global.css";
-import Home from "./Home/home";
+import Home from "./Home/Home";
 
 const queryClient = new QueryClient();
 
